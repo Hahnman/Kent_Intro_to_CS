@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+        <title>Google API</title>
+    <style>
+      html, body, #map-canvas {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+ 
+<body>
+    <CENTER> <h2> Google API Lab Example </h2> </CENTER>
+    <div id="map-canvas"></div>
+
+
+<script>
+
+function initMap() {
+  
+  var myLatlng1 = new google.maps.LatLng(41.327301,-81.856918);
+  var myLatlng2 = new google.maps.LatLng(41.402338,-81.761945);
+  var myLatlng3 = new google.maps.LatLng(41.318553,-81.833557);
+  
+  var mapOptions = {
+    zoom: 12,
+    center: myLatlng1,
+    mapTypeId: google.maps.MapTypeId.HYBRID   // ROADMAP, HYBRID, SATELLITE, TERRAIN
+  }
+
+// Create the map and options
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  
+// Stuff for first locator
+  var marker1 = new google.maps.Marker({
+      position: myLatlng1,
+      map: map,
+      title: 'My House'
+  });
+  
+  var contentString1 =
+    '<div id="content1" style="width:170px">'+
+      '<h3 id="Heading1">Nate\'s House</h3>'+
+      '<div id="bodyContent1">'+
+        '<p><b>My House</b>, is not the biggest or best ' +
+          'house out there, but it is fully paid off' +
+	  '<a href="http://ferrummorainefarm.com/Welcome.html">' +
+        '</p>' +
+      '</div>' +
+    '</div>';
+    
+  var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+  
+    google.maps.event.addListener(marker1, 'click', function() {
+    infowindow1.open(map,marker1);
+  });
+  
+// Stuff for second locator
+  var contentString2 =
+    '<div id="content2" style="width:170px">'+
+      '<div id="siteNotice2">'+ 
+      '</div>' +
+      '<h3 id="Heading2">Holy Name</h3>'+
+      '<div id="bodyContent2">'+
+        '<p>HNHS-<b></b>a lovely place that fulfills   ' +
+          'all of one\'s Catholic-biased educational needs' +
+	  '<b></b> <br>' +
+          '<a href="http://www.holynamehs.com"> Holy Name Website</a>' +
+        '</p>'+
+      '</div>'+
+    '</div>';
+    
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });  
+    
+  var marker2 = new google.maps.Marker({
+      position: myLatlng2,
+      map: map,
+      title: 'Holy Name High School'
+  });
+   
+  google.maps.event.addListener(marker2, 'click', function() {
+    infowindow2.open(map,marker2);
+  });
+  
+   
+// Stuff for third locator
+  var contentString3 =
+    '<div id="content3" style="width:170px">'+ 
+      '<div id="siteNotice3">'+
+      '</div>'+
+      '<h3 id="Heading3"> Strongsville Cemetery</h3>'+
+      '<div id="bodyContent3">'+
+	'<p> Where I see myself in 100 years' +
+	'</p>' +
+      '</div>' +
+    '</div>';
+    
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  
+  var marker3 = new google.maps.Marker({
+      position: myLatlng3,
+      map: map,
+      title: 'Strongsville Cemetery'
+  });
+   
+  google.maps.event.addListener(marker3, 'click', function() {
+    infowindow3.open(map,marker3);
+  });
+  
+  
+}  // end of initMap function
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHFjv8_S4Nx_MF5q0eypFXhjEy0sLrY0k&callback=initMap"
+	async defer></script>
+ 
+  </body>
+</html>
