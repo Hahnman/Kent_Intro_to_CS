@@ -1,0 +1,17 @@
+body{
+    background-color: white;
+    color: red;
+    font-size: 16pt;
+    border: solid red 2px;
+}
+
+p{
+    background-color: lightblue;
+    border: solid red 2px;
+}
+div{
+    border: solid red 2px;
+}
+input{
+    border: solid red 2px;
+}

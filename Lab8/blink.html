@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+
+<title>Simple image based animation</title>
+
+<script LANGUAGE="Javascript">
+
+function blink(ms) 
+{
+	document.getElementById("eye").src = "images/eye-half.gif";         // swap out eye-open.gif with eye-half.gif
+																		
+	setTimeout("document.getElementById('eye').src = 'images/eye-close.gif' ", ms);   // wait 100 milliseconds
+    																	               // then swap out eye-half.gif with eye-close.gif
+	
+	setTimeout("document.getElementById('eye').src = 'images/eye-half.gif' ", ms+100);    // wait another 100 milliseconds
+	          																	 	   // then swap out eye-closed.gif with eye-half.gif
+
+	setTimeout("document.getElementById('eye').src = 'images/eye-open.gif' ", ms+200);    // wait another 100 milliseconds
+         								 								               // then swap out eye-half.gif with eye-open.gif
+}
+</script>
+</HEAD>
+
+<BODY>
+
+	<H1 style="text-align:center;color:#8080C0"> Simple Image Based Animation</H1>
+	<DIV style="text-align:center;">
+	  <TABLE BORDER="0" WIDTH="95%" CELLPADDING="0" CELLSPACING="0">
+		<TR>
+		  <TD>
+			<P style="text-align:left;">We've created an simple animation that works using the 
+			<span style="color:#8080C0;font-weight:bold;">onMouseOver</span>
+			Event Handler.  When a user moves the mouse over the image of the eye the 
+			<span style="color:#8080C0;font-weight:bold;">onMouseOver</span>
+			Event Handler calls (runs) the <span style="color:#FF0000;font-weight:bold;">blink()
+			</span> function. This function makes the eye blink, by switching the image files used.  
+			The same behavior happens if the user clicks on the BLINK button.  In this case the 
+			<span style="color:#8080C0;font-weight:bold;">onClick</span> Event Handler calls the 
+			<span style="color:#FF0000;font-weight:bold;">blink()</span> function.</p>
+		  </TD>
+		</TR>
+	  </TABLE>
+	  
+	  <br />
+    	<image id="eye" src="images/eye-open.gif" border="0" width="96" height="96" onMouseOver="blink(100);"> 
+	  <br />
+  
+		<input TYPE="button" Value="Blink Slow" onClick="blink(300);">
+		<input TYPE="button" Value="Blink" onClick="blink(150);">
+		<input TYPE="button" Value="Blink Faster" onClick="blink(10);">
+		
+	</DIV>
+
+
+</BODY>
+</HTML>

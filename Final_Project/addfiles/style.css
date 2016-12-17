@@ -1,0 +1,82 @@
+body {
+    float:none;
+    width:85%;
+    background-image:url(https://web.cs.kent.edu/~nhahn3/Project/image/fan.jpg);
+    color:#000000;
+    border-style:dotted;
+    border-radius:30px;
+    border-width:10px;
+    border-color: white;
+    margin:10px 10px 10px 30px;
+    padding:10px 10px 10px 15px;
+    color: white;
+    alignment-adjust: central;
+}
+
+#banner{
+width: 1000px;
+height: 340px;
+}
+
+#product{
+    border-style:groove;
+    border-width:2px;
+    border-color:white;
+}
+
+#sand1{
+    border-style: dashed;
+    border-color:white;
+}
+
+#sand2{
+  border-style: dashed;
+  border-color: white;
+}
+form{
+    background-color:white;
+    margin:auto;
+    width:60%;
+    text-align:left;
+    color:black;
+    border-style:dotted;
+    border-color:grey;
+    border-width:3px;
+    padding:10px;
+}
+
+#copy{
+color:grey;
+font-size: 9pt;
+}
+
+#about{
+    width:700px;
+    text-align: center;
+}
+
+h1{
+	color:#cc0000;
+	font-family:elephant,monaco,monospace;
+}
+
+h2 {
+	color:#cc0000;
+	font-family:elephant,monaco,monospace;
+}
+
+h3 {
+	color:#cc0000;
+}
+h4
+{
+	color:red;
+}
+
+ul{
+	color:silver;
+}
+
+p{
+	color:white;
+}

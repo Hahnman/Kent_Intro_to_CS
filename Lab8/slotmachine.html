@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            Slot Machine
+        </title>
+    </head>
+    <body align="center">
+        <h1 style="color:blue">Click To Win: Try Online Slots Today</h1>
+        <img id="img1" width="200" height="300" style="border-style: double" src="Images/lemon.jpg">
+        <img id="img2" width="200" height="300" style="border-style: double" src="Images/lemon.jpg">
+        <img id="img3" width="200" height="300" style="border-style: double" src="Images/lemon.jpg">
+             <br><br/>
+             <input type="button" value="spin" onclick="spin();">
+                <br><br/>
+                    Credit:<input type="number" id="credit" value="20" readonly="readonly">
+        <div id="outmsg" style="background-color: lightblue;font-size: xx-large;text-align: left">Try Your Luck: Click the Spin Button</div>
+    </body>
+    <script>
+        function spin()
+        {
+            var credit;
+            credit=document.getElementById("credit").value;
+            if (credit==0) {
+                
+             document.getElementById("outmsg").innerHTML="Sorry You Don't Have Enough Credits To Play";
+             return;
+            }
+            credit--;
+            var ImageName=[];
+            ImageName[0]="images/lemon.jpg";
+            ImageName[1]="images/bar.jpg";
+            ImageName[2]="images/cherry.jpg";
+            ImageName[3]="images/donut.jpg";
+            var index1=Math.floor(Math.random()*4)
+            document.getElementById("img1").src=ImageName[index1];
+            var index2=Math.floor(Math.random()*4)
+            document.getElementById("img2").src=ImageName[index2];
+            var index3=Math.floor(Math.random()*4)
+            document.getElementById("img3").src=ImageName[index3];
+            
+            if ((index1==index2)&&(index1==index3)) {
+                
+                document.getElementById("outmsg").innerHTML="You Win! Your Credit Is:"+credit;
+                credit+=10;
+            }
+            else
+            document.getElementById("outmsg").innerHTML="Oh No! Your Credit Is:"+credit;
+            
+            document.getElementById("credit").value=credit;
+        }
+    </script>
+</html>

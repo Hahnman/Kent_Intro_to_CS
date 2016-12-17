@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Game Time</title>
+    </head>
+    <body align="center">
+        <h1 style=" color: green">Let's Play a Game</h1>
+        <p style=" color: blue"> Can you guess the number, 1-10, that I am thinking of?</p>
+            Enter you guess here <input type= "number" min="1" max="10" id="userGuess"/>
+            <p style=" color: pink"> Click the Check your Guess box after entering you guess</p>
+            <input type="button" style=" background-color:green" value="Check Your Guess" onclick="CheckGuess(document.getElementById('userGuess').value)"/>
+            <div style=" border-style: dotted; border-color: green" id="outputMsg">Output Message displays here</div>
+    </body>
+    <script>
+        function CheckGuess(userGuess)
+        {
+            var secretNumber;
+            secretNumber=Math.floor((Math.random()*10)+1);
+            if (secretNumber==userGuess)
+            {
+                document.getElementById("outputMsg").innerHTML="you are correct! the secret number was:"+secretNumber
+            }
+            else
+            {document.getElementById("outputMsg").innerHTML="you are wrong! the secret number was:"+secretNumber
+            }
+        }
+    </script>
+</html>

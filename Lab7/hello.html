@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h2>Press this button</h2>
+        <p>
+            to see a whole new world!
+        </p>
+        <div id="msg"></div>
+        <input type="button" value="Press This" onclick="go()"/>
+        <img id="myImg"/>
+    </body>
+    <script>
+        function go()
+        {
+            document.getElementById("msg").innerHTML="Boom! Mars";
+            document.getElementById("msg").style.backgroundColor="yellow";
+            document.getElementById("msg").style.color="blue";
+            document.body.style.backgroundColor="black"
+            document.getElementById("myImg").src="mars.jpg"
+        }
+    </script>
+</html>

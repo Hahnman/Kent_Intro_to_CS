@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BillyBob's Give Us Your Money</title>
+	<link href="https://web.cs.kent.edu/~nhahn3/Project/addfiles/style.css" rel="stylesheet" type="text/css">
+        <script src="https://web.cs.kent.edu/~nhahn3/Project/addfiles/price.js"></script>
+    </head>
+        <body>
+        <div id="header">
+            <img src="https://web.cs.kent.edu/~nhahn3/Project/image/BBBD.png">
+        </div>
+        <div id="options">
+            <h2>
+            -------
+            <a href="billybobs.html">HOME</a>
+            ----------
+            <a>ORDER</a>
+            ----------
+            <a href="about.html">ABOUT</a>
+            -------
+            </h2>
+            
+<form>
+		<div id="ordertitle">
+			<h2>Order Form</h2>
+		</div>
+		<h2>Sandwich Type</h2>
+			<input type="radio" name="type" id="ham" value="ham" required>Ham ($5.00)
+			<br>
+			<input type="radio" name="type" id="tur" value="tur" required>Turkey ($6.00)
+			<br>
+			<input type="radio" name="type" id="sal" value="sal" required>Salami ($7.00)
+			<br>
+			<input type="radio" name="type" id="roa" value="roa" required>Roast Beef($8.00)
+			<br>
+		<h2>Cheese($1.00 each)</h2>
+			<input type="checkbox" name="cheese" id="ame" value="ame">American
+			<br>
+			<input type="checkbox" name="cheese" id="sws" value="sws">Swiss
+			<br>
+			<input type="checkbox" name="cheese" id="pro" value="pro">Provolone
+			<br>
+			<input type="checkbox" name="cheese" id="che" value="che">Cheddar
+			<br>
+			<input type="checkbox" name="cheese" id="mon" value="mon">Montery Jack
+			<br>
+		<h2>Vegetable($0.50 each)</h2>
+			<input type="checkbox" name="vegetable" id="lett" value="lett">Lettuce
+			<br>
+			<input type="checkbox" name="vegetable" id="tom" value="tom">Tomato
+			<br>
+			<input type="checkbox" name="vegetable" id="mush" value="mush">Mushrooms
+			<br>
+		<h2>Order Type</h2>
+			<input type="radio" name="order" id="pick-up" onclick="disableBox()" value="pick-up" checked>Carry-Out
+			<br>
+			<input type="radio" name="order" id="delivery" onclick="enableBox()" value="delivery">Delivery
+			<br>
+			Delivery Address:<br>
+			<input type="text" name="address" id="address" disabled>
+		<h2>Checkout</h2>
+			<input type="reset" onclick="resetPrice()" id="reset" value="Reset">
+			<input type="button" value="Calculate Price" onclick="calculatePrice()">
+			<br>
+			Final Price:<br>
+			<p id="price" style="color:black"></p>
+		<h2>Confirm order?</h2>
+			<input type="button" value="Confirm" onclick="confirm()">
+		</form>
+		</div>
+        </body>
+</html>
+    <br>
+<div id="footer">
+    <p id="copy">Here is the space I would put a copyright,
+    if I had one...but I dont, so in the words of
+    John Stump, "Unauthorized [copying] of this material
+    is not only illegal, unethical, irresponsible, and
+    disrespecctful, it is very, very uncool"
+    </p>
+</div>

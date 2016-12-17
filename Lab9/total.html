@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Tip Calculator</title>
+        <link href="stylesheet.css" type="stylesheet/text" rel="stylesheet">
+    </head>
+    <body>
+        <p>
+            Enter the Check Amount:<input id="amountBox" type="text" size="10">
+            <br/><br/>
+            Enter the Tip Percentage:<input id="tipBox" type="text" size="4">
+            <br/><br/>
+            Enter the Tax Percentage:<input id="taxBox" type="text" size="2">
+            <br/><br/>
+        </p>
+        <br/>
+        <input type="button" value="Click Here" onclick="tipCalculation();">
+            <hr/>
+            <div id="outputBox"></div>
+        </input>
+    </body>
+    <script>
+        function tipCalculation(){
+            
+            var amount;
+            amount=parseFloat(document.getElementById("amountBox").value);
+            var tipP=parseFloat(document.geElementById("tipBox").value);
+            var tipD=tipP/100;
+            var tipAmount=amount*tipD;
+            document.getElementById("outputBox").innerHTML="You should tip:$"+tipAmount;
+        }
+    </script>
+</html>
